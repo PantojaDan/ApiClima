@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     function consultarAPI(pais,ciudad){
         const apiId = "84d70eb0548ae3641b62fbc3332ef7a1";
 
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apiId}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apiId}`;
 
         fetch(url)
             .then(respuesta => respuesta.json())
