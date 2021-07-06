@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container font-primary">
+
+        <div id="resultado">
+        
+        </div>
+            
+        <div class="formulario">
+            <form action="#" id="form" method="POST">
+                
+                <div>
+                    <label for="paises" class="text-primary">Selecciona un pais: </label>
+                    <select name="paises" id="paises">
+                        <option value="">--Seleccione--</option>
+                        <option value="AR">Argentina</option>
+                        <option value="CO">Colombia</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="ES">España</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="MX">México</option>
+                        <option value="PE">Perú</option>
+                    </select>
+                </div>
+        
+                <br>
+                
+                <div>
+                    <label for="ciudad" class="text-primary">Ingresa una ciudad: </label>
+                    <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" value=""/>
+                </div>
+
+                <button>Consultar</button>
+            </form>
+        </div>
+
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

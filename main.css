@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.font-primary{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #171717;
+}
+
+.formulario{
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #289672;
+    transition: all .4s ease-in-out;
+}
+.formulario form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.formulario form div:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.formulario form div:nth-child(2){
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.text-primary{
+    font-size: 22px;
+    margin-right: 10px;
+    font-weight: 500;
+    color: white;
+}
+input,select{
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: grey;
+}
+button{
+    border: none;
+    padding: 10px;
+    margin: 20px 0px 5px 0px;
+    cursor: pointer;
+    background-color: #1E6F5C;
+    color: #fff;
+    transition: all .1s ease-in;
+}
+button:hover{
+    transform: scale(1.05);
+}
+
+
+/*Notificar error*/
+@keyframes mostrarError {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+.error{
+    padding: 10px;
+    background-color: darkred;
+    color: white;
+    position: absolute;
+    top: 0;
+    animation: mostrarError 1s 1 forwards;
+}
+
+
+/*Spinner*/
+@keyframes rotarSpinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.spinner{
+    margin: 20px 0px 5px 0px;
+    border-top: 5px dotted gray;
+    border-bottom: 5px dotted white;
+    border-left: 5px dotted #e1e1e1;
+    border-right: 5px dotted transparent;
+    padding: 20px;
+    border-radius: 50%;
+    animation: rotarSpinner 1s infinite linear running;
+}
+
+
+/*Estilos al contenedor de resultados*/
+.resultado{
+    max-width: 410px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    background-color: #1E6F5C;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.temperatura{
+    width: 60%;
+    text-align: center;
+    height: 100%;
+}
+.temperatura div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+.temperatura h1{
+    font-size: 30px;
+}
+.temperatura h2{
+    font-size: 50px;
+}
+.temperatura h1, h2{
+    color: white;
+    margin-bottom: 40px;
+}
+.clima{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 40%;
+    padding: 10px;
+    height: 100%;
+}
+
+@media screen and (max-width: 400px){
+    .text-primary{
+        font-size: 16px;
+    }
+    .formulario form div{
+        flex-direction: column;
+    }
+}
